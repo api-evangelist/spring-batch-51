@@ -1,0 +1,58 @@
+name: Spring Batch
+description: Spring Batch is a lightweight, comprehensive batch framework designed to enable the development of robust batch applications vital for the daily operations of enterprise systems.
+image: https://spring.io/img/projects/spring-batch.svg
+url: https://spring.io/projects/spring-batch
+created: '2024-01-15'
+modified: '2024-01-15'
+specificationVersion: '0.18'
+tags:
+- batch processing
+- enterprise
+- spring framework
+- java
+- scheduling
+- data processing
+apis:
+- name: Spring Batch Core API
+  description: Core API for Spring Batch 5.1 providing batch processing capabilities
+  baseURL: https://docs.spring.io/spring-batch/docs/5.1.x/api/
+  humanURL: https://docs.spring.io/spring-batch/docs/5.1.x/reference/html/
+  version: 5.1.x
+  properties:
+  - type: X-Documentation
+    url: https://docs.spring.io/spring-batch/docs/5.1.x/reference/html/
+  - type: X-API-Reference
+    url: https://docs.spring.io/spring-batch/docs/5.1.x/api/
+  - type: X-GitHub
+    url: https://github.com/spring-projects/spring-batch
+  - type: X-Release-Notes
+    url: https://github.com/spring-projects/spring-batch/releases
+  - type: X-Getting-Started
+    url: https://spring.io/guides/gs/batch-processing/
+  - type: X-Maven-Repository
+    url: https://mvnrepository.com/artifact/org.springframework.batch/spring-batch-core/5.1.0
+  - type: X-Stack-Overflow
+    url: https://stackoverflow.com/questions/tagged/spring-batch
+  - type: X-License
+    url: https://github.com/spring-projects/spring-batch/blob/main/LICENSE.txt
+  - type: X-Issues
+    url: https://github.com/spring-projects/spring-batch/issues
+  - type: X-Sample-Projects
+    url: https://github.com/spring-projects/spring-batch/tree/main/spring-batch-samples
+maintainers:
+- FN: Spring Team
+  email: spring-batch@vmware.com
+  X-twitter: springcentral
+  X-github: spring-projects
+include:
+- name: Spring Batch Integration
+  url: https://docs.spring.io/spring-batch/docs/5.1.x/reference/html/spring-batch-integration.html
+- name: Spring Batch Test
+  url: https://docs.spring.io/spring-batch/docs/5.1.x/reference/html/testing.html
+common:
+- type: X-Blog
+  url: https://spring.io/blog/category/batch
+- type: X-Support
+  url: https://spring.io/support
+- type: X-Forum
+  url: https://stackoverflow.com/questions/tagged/spring-batch
