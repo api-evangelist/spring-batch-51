@@ -7,7 +7,7 @@ description: >-
   chunk-oriented processing with retry, skip, and restart capabilities.
 image: https://spring.io/img/projects/spring-batch.svg
 url: https://spring.io/projects/spring-batch
-type: opensource
+kind: opensource
 created: '2024-01-15'
 modified: '2026-05-02'
 specificationVersion: '0.18'
@@ -38,13 +38,13 @@ apis:
         url: https://docs.spring.io/spring-batch/docs/5.1.x/reference/html/
       - type: API Documentation
         url: https://docs.spring.io/spring-batch/docs/5.1.x/api/
-      - type: GitHub Repository
+      - type: GitHubRepository
         url: https://github.com/spring-projects/spring-batch
       - type: Getting Started Guide
         url: https://spring.io/guides/gs/batch-processing/
       - type: Maven Repository
         url: https://mvnrepository.com/artifact/org.springframework.batch/spring-batch-core/5.1.0
-      - type: Stack Overflow
+      - type: StackOverflow
         url: https://stackoverflow.com/questions/tagged/spring-batch
       - type: License
         url: https://github.com/spring-projects/spring-batch/blob/main/LICENSE.txt
@@ -52,7 +52,7 @@ apis:
         url: https://github.com/spring-projects/spring-batch/issues
       - type: Sample Projects
         url: https://github.com/spring-projects/spring-batch/tree/main/spring-batch-samples
-      - type: Release Notes
+      - type: ReleaseNotes
         url: https://github.com/spring-projects/spring-batch/releases
       - type: OpenAPI
         url: openapi/spring-batch-51-openapi.yml
