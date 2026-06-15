@@ -1,0 +1,871 @@
+{
+  "item": [
+    {
+      "id": "988bb435-a1bf-416c-94d0-5383bad5ad6e",
+      "name": "Batch Jobs",
+      "description": {
+        "content": "Batch job execution management and monitoring",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "26b78e4e-ddbd-44fe-800b-503789a5f8ae",
+          "name": "List Batch Jobs",
+          "request": {
+            "name": "List Batch Jobs",
+            "description": {
+              "content": "Returns all registered Spring Batch jobs in the application context with their current status and last execution information.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "batch",
+                "jobs"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "fe89abab-715a-4b10-a8d4-c3d58468a0cb",
+              "name": "List of batch jobs",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "batch",
+                    "jobs"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"jobs\": [\n    {\n      \"name\": \"importUserJob\",\n      \"status\": \"UNKNOWN\",\n      \"lastExecutionTime\": \"1951-07-10T19:05:35.656Z\"\n    },\n    {\n      \"name\": \"importUserJob\",\n      \"status\": \"FAILED\",\n      \"lastExecutionTime\": \"2011-10-07T01:00:44.042Z\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "712d0630-dcae-4e5e-b2c7-bfaff986c8dd",
+          "name": "Get Batch Job Details",
+          "request": {
+            "name": "Get Batch Job Details",
+            "description": {
+              "content": "Returns details for a specific batch job including its current configuration and execution history summary.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "batch",
+                "jobs",
+                ":jobName"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "jobName",
+                  "description": "(Required) Name of the batch job"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "9ec65102-ff76-4e4b-a3d3-ea4d1d04073b",
+              "name": "Job details",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "batch",
+                    "jobs",
+                    ":jobName"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "jobName",
+                      "description": "(Required) Name of the batch job"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"name\": \"string\",\n  \"stepNames\": [\n    \"string\",\n    \"string\"\n  ],\n  \"executionCount\": 4093,\n  \"lastExecution\": {\n    \"id\": 9611,\n    \"jobId\": 8359,\n    \"jobName\": \"string\",\n    \"startTime\": \"1971-02-10T17:00:20.839Z\",\n    \"endTime\": \"1964-02-26T08:41:04.664Z\",\n    \"status\": \"STARTING\",\n    \"exitCode\": \"string\",\n    \"exitDescription\": \"string\",\n    \"jobParameters\": {\n      \"key_0\": \"string\",\n      \"key_1\": \"string\"\n    },\n    \"stepExecutions\": [\n      {\n        \"id\": 6505,\n        \"stepName\": \"string\",\n        \"status\": \"STOPPING\",\n        \"readCount\": 4943,\n        \"writeCount\": 3457,\n        \"commitCount\": 1224,\n        \"rollbackCount\": 7623,\n        \"readSkipCount\": 8161,\n        \"processSkipCount\": 9713,\n        \"writeSkipCount\": 6449,\n        \"filterCount\": 3704,\n        \"startTime\": \"1991-09-21T19:40:54.300Z\",\n        \"endTime\": \"1968-07-28T06:14:04.016Z\",\n        \"exitCode\": \"string\",\n        \"exitDescription\": \"string\"\n      },\n      {\n        \"id\": 5837,\n        \"stepName\": \"string\",\n        \"status\": \"STOPPED\",\n        \"readCount\": 3044,\n        \"writeCount\": 9748,\n        \"commitCount\": 6119,\n        \"rollbackCount\": 5815,\n        \"readSkipCount\": 7475,\n        \"processSkipCount\": 6983,\n        \"writeSkipCount\": 2870,\n        \"filterCount\": 8712,\n        \"startTime\": \"2006-02-17T06:19:25.017Z\",\n        \"endTime\": \"1995-12-24T05:45:06.816Z\",\n        \"exitCode\": \"string\",\n        \"exitDescription\": \"string\"\n      }\n    ]\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "143dc71c-f4a1-49e2-9483-e089989eb6bb",
+              "name": "Job not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "batch",
+                    "jobs",
+                    ":jobName"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "jobName",
+                      "description": "(Required) Name of the batch job"
+                    }
+                  ]
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "d76ed0e7-6aca-466c-8d51-963f262fa52c",
+          "name": "List Job Executions",
+          "request": {
+            "name": "List Job Executions",
+            "description": {
+              "content": "Returns execution history for a specific batch job, including start time, end time, status, and exit code for each execution.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "batch",
+                "jobs",
+                ":jobName",
+                "executions"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "page",
+                  "value": "0",
+                  "description": "Page number (zero-based)"
+                },
+                {
+                  "disabled": false,
+                  "key": "size",
+                  "value": "20",
+                  "description": "Number of executions per page"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "jobName",
+                  "description": "(Required) Name of the batch job"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "848ebb3e-7961-4eaf-a225-6f5c6ec81f78",
+              "name": "Job execution history",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "batch",
+                    "jobs",
+                    ":jobName",
+                    "executions"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "page",
+                      "value": "0"
+                    },
+                    {
+                      "key": "size",
+                      "value": "20"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "jobName",
+                      "description": "(Required) Name of the batch job"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"content\": [\n    {\n      \"id\": 9956,\n      \"jobId\": 8765,\n      \"jobName\": \"string\",\n      \"startTime\": \"2006-02-23T19:22:32.295Z\",\n      \"endTime\": \"1987-10-05T03:00:54.708Z\",\n      \"status\": \"STOPPED\",\n      \"exitCode\": \"string\",\n      \"exitDescription\": \"string\",\n      \"jobParameters\": {\n        \"key_0\": \"string\",\n        \"key_1\": \"string\",\n        \"key_2\": \"string\"\n      },\n      \"stepExecutions\": [\n        {\n          \"id\": 9929,\n          \"stepName\": \"string\",\n          \"status\": \"STARTING\",\n          \"readCount\": 3187,\n          \"writeCount\": 5973,\n          \"commitCount\": 8973,\n          \"rollbackCount\": 800,\n          \"readSkipCount\": 6955,\n          \"processSkipCount\": 3885,\n          \"writeSkipCount\": 7178,\n          \"filterCount\": 6035,\n          \"startTime\": \"1952-05-19T03:31:04.107Z\",\n          \"endTime\": \"1950-07-09T06:30:10.496Z\",\n          \"exitCode\": \"string\",\n          \"exitDescription\": \"string\"\n        },\n        {\n          \"id\": 8853,\n          \"stepName\": \"string\",\n          \"status\": \"UNKNOWN\",\n          \"readCount\": 3088,\n          \"writeCount\": 1989,\n          \"commitCount\": 253,\n          \"rollbackCount\": 7843,\n          \"readSkipCount\": 425,\n          \"processSkipCount\": 336,\n          \"writeSkipCount\": 3399,\n          \"filterCount\": 6337,\n          \"startTime\": \"2004-01-27T09:03:01.859Z\",\n          \"endTime\": \"2013-03-03T13:09:49.837Z\",\n          \"exitCode\": \"string\",\n          \"exitDescription\": \"string\"\n        }\n      ]\n    },\n    {\n      \"id\": 8048,\n      \"jobId\": 3750,\n      \"jobName\": \"string\",\n      \"startTime\": \"1975-01-22T10:42:32.545Z\",\n      \"endTime\": \"1976-07-08T21:56:16.081Z\",\n      \"status\": \"STOPPED\",\n      \"exitCode\": \"string\",\n      \"exitDescription\": \"string\",\n      \"jobParameters\": {\n        \"key_0\": \"string\",\n        \"key_1\": \"string\"\n      },\n      \"stepExecutions\": [\n        {\n          \"id\": 6917,\n          \"stepName\": \"string\",\n          \"status\": \"STOPPED\",\n          \"readCount\": 6294,\n          \"writeCount\": 3955,\n          \"commitCount\": 8452,\n          \"rollbackCount\": 7736,\n          \"readSkipCount\": 1064,\n          \"processSkipCount\": 6019,\n          \"writeSkipCount\": 6202,\n          \"filterCount\": 6149,\n          \"startTime\": \"2010-08-10T02:38:58.051Z\",\n          \"endTime\": \"1958-06-07T03:46:56.570Z\",\n          \"exitCode\": \"string\",\n          \"exitDescription\": \"string\"\n        },\n        {\n          \"id\": 3524,\n          \"stepName\": \"string\",\n          \"status\": \"STOPPING\",\n          \"readCount\": 8520,\n          \"writeCount\": 3793,\n          \"commitCount\": 9792,\n          \"rollbackCount\": 3135,\n          \"readSkipCount\": 9854,\n          \"processSkipCount\": 4703,\n          \"writeSkipCount\": 5996,\n          \"filterCount\": 1280,\n          \"startTime\": \"2008-03-25T04:50:47.762Z\",\n          \"endTime\": \"1986-08-14T20:22:27.839Z\",\n          \"exitCode\": \"string\",\n          \"exitDescription\": \"string\"\n        }\n      ]\n    }\n  ],\n  \"page\": 1675,\n  \"size\": 2887,\n  \"totalElements\": 9159,\n  \"totalPages\": 1887\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "1ae58555-ed6d-4060-b7e1-b939d097d354",
+          "name": "List Job Instances",
+          "request": {
+            "name": "List Job Instances",
+            "description": {
+              "content": "Returns job instances for a specific batch job. Each instance represents a unique set of job parameters.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "batch",
+                "jobs",
+                ":jobName",
+                "instances"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "page",
+                  "value": "0"
+                },
+                {
+                  "disabled": false,
+                  "key": "size",
+                  "value": "20"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "jobName",
+                  "description": "(Required) Name of the batch job"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "eff74144-08ee-413f-8605-2b59ef030f12",
+              "name": "Job instances",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "batch",
+                    "jobs",
+                    ":jobName",
+                    "instances"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "page",
+                      "value": "0"
+                    },
+                    {
+                      "key": "size",
+                      "value": "20"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "jobName",
+                      "description": "(Required) Name of the batch job"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"content\": [\n    {\n      \"id\": 9533,\n      \"jobName\": \"string\",\n      \"jobKey\": \"string\",\n      \"jobParameters\": {\n        \"key_0\": \"string\"\n      }\n    },\n    {\n      \"id\": 885,\n      \"jobName\": \"string\",\n      \"jobKey\": \"string\",\n      \"jobParameters\": {\n        \"key_0\": \"string\",\n        \"key_1\": \"string\"\n      }\n    }\n  ],\n  \"page\": 8551,\n  \"size\": 6820,\n  \"totalElements\": 9087,\n  \"totalPages\": 1481\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "c84def2b-67b0-474f-b080-194451837f12",
+      "name": "Health",
+      "description": {
+        "content": "Application and component health checks",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "fce158f0-fe0a-4e92-b04a-765defcd9b43",
+          "name": "Get Application Health",
+          "request": {
+            "name": "Get Application Health",
+            "description": {
+              "content": "Returns the health status of the Spring Batch application including database connectivity and batch job health indicators.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "health"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "d44cb247-8e9f-4f82-a909-11f7594ba5ac",
+              "name": "Application is healthy",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "health"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"status\": \"UNKNOWN\",\n  \"components\": {\n    \"key_0\": {\n      \"status\": \"UP\",\n      \"details\": {\n        \"key_0\": \"string\"\n      }\n    },\n    \"key_1\": {\n      \"status\": \"OUT_OF_SERVICE\",\n      \"details\": {\n        \"key_0\": \"string\",\n        \"key_1\": \"string\",\n        \"key_2\": \"string\",\n        \"key_3\": 2677\n      }\n    }\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "d1c6c78d-2ea1-4a73-b2fa-1208e737ac03",
+              "name": "Application is unhealthy",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "health"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Service Unavailable",
+              "code": 503,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"status\": \"UNKNOWN\",\n  \"components\": {\n    \"key_0\": {\n      \"status\": \"UP\",\n      \"details\": {\n        \"key_0\": \"string\"\n      }\n    },\n    \"key_1\": {\n      \"status\": \"OUT_OF_SERVICE\",\n      \"details\": {\n        \"key_0\": \"string\",\n        \"key_1\": \"string\",\n        \"key_2\": \"string\",\n        \"key_3\": 2677\n      }\n    }\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "0b0c204c-47f8-4f37-916e-65f48acbbbb2",
+          "name": "Get Batch Health",
+          "request": {
+            "name": "Get Batch Health",
+            "description": {
+              "content": "Returns health status specific to Spring Batch, including job repository connectivity and last job execution status.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "health",
+                "batch"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "58904120-f9e9-4671-b36a-d3ac6481c571",
+              "name": "Batch subsystem is healthy",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "health",
+                    "batch"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"status\": \"UNKNOWN\",\n  \"details\": {\n    \"key_0\": 2598\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "c5861a44-7d00-45e5-8974-56601b6ace43",
+      "name": "Metrics",
+      "description": {
+        "content": "Micrometer-based application metrics",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "c4491a84-4dfa-497d-9f78-d129add1a1b0",
+          "name": "List Available Metrics",
+          "request": {
+            "name": "List Available Metrics",
+            "description": {
+              "content": "Returns a list of all available metric names collected by Micrometer, including Spring Batch job and step metrics.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "metrics"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "b562b788-bb97-4745-828a-ac56a442f42c",
+              "name": "List of available metrics",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "metrics"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"names\": [\n    \"spring.batch.job.duration\",\n    \"spring.batch.step.duration\",\n    \"spring.batch.chunk.size\",\n    \"spring.batch.item.read\",\n    \"spring.batch.item.write\"\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "1a02a3bd-88b1-4782-91c0-601618f4f4b7",
+          "name": "Get Metric Value",
+          "request": {
+            "name": "Get Metric Value",
+            "description": {
+              "content": "Returns measurements for a specific metric. Spring Batch 5.1 exposes metrics under the spring.batch namespace including job duration, step duration, read count, write count, and skip count.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "metrics",
+                ":metricName"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "tag",
+                  "value": "<string>",
+                  "description": "Tag filter in the form name:value (can be repeated)"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "metricName",
+                  "description": "(Required) Name of the metric (e.g., spring.batch.job.duration, spring.batch.step.duration, spring.batch.chunk.size)"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "628a5c09-c6a8-481f-ba08-7d4735b312b5",
+              "name": "Metric measurements",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "metrics",
+                    ":metricName"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "tag",
+                      "value": "job.name:importUserJob"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "metricName",
+                      "description": "(Required) Name of the metric (e.g., spring.batch.job.duration, spring.batch.step.duration, spring.batch.chunk.size)"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"name\": \"string\",\n  \"description\": \"string\",\n  \"baseUnit\": \"string\",\n  \"measurements\": [\n    {\n      \"statistic\": \"string\",\n      \"value\": 4482.044197129385\n    },\n    {\n      \"statistic\": \"string\",\n      \"value\": 6583.649488042849\n    }\n  ],\n  \"availableTags\": [\n    {\n      \"tag\": \"string\",\n      \"values\": [\n        \"string\",\n        \"string\"\n      ]\n    },\n    {\n      \"tag\": \"string\",\n      \"values\": [\n        \"string\",\n        \"string\"\n      ]\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "0def6508-d00e-4d42-8f80-6aa6fd5fe614",
+              "name": "Metric not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "metrics",
+                    ":metricName"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "tag",
+                      "value": "job.name:importUserJob"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "metricName",
+                      "description": "(Required) Name of the metric (e.g., spring.batch.job.duration, spring.batch.step.duration, spring.batch.chunk.size)"
+                    }
+                  ]
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "http://localhost:8080/actuator",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "8a72df69-42c0-4f52-862c-4c7ef6062fe1",
+    "name": "Spring Batch 5.1 Actuator API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Spring Boot Actuator endpoints exposed by Spring Batch 5.1 applications for monitoring and managing batch jobs. Provides health checks, metrics, job execution status, and step execution details via the Spring Boot Actuator infrastructure. These endpoints are available when spring-boot-actuator is on the classpath alongside spring-batch-core.\n\nContact Support:\n Name: Spring Team",
+      "type": "text/plain"
+    }
+  }
+}

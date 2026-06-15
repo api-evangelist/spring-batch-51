@@ -1,10 +1,23 @@
-# Spring Batch 5.1
+# Spring Batch 5.1 (spring-batch-51)
 
-Spring Batch 5.1 is a lightweight, comprehensive batch framework designed to enable the development of robust batch applications vital for the daily operations of enterprise systems. Version 5.1 delivers Micrometer metrics, virtual thread support (Java 21), and enhanced chunk-oriented processing with retry, skip, and restart capabilities.
+Spring Batch 5.1 is the latest enterprise batch processing framework release for the Spring ecosystem. Designed to enable development of robust batch applications vital for daily operations of enterprise systems. Version 5.1 delivers Micrometer metrics, virtual thread support (Java 21), and enhanced chunk-oriented processing with retry, skip, and restart capabilities.
 
-- **URL:** https://spring.io/projects/spring-batch
-- **Type:** Open Source
-- **Tags:** Batch Processing, Data Processing, Enterprise, ETL, Java, Job Scheduling, Spring Framework
+**APIs.json:** [https://spring.io/projects/spring-batch](https://spring.io/projects/spring-batch)
+
+## Tags
+
+- Batch Processing
+- Data Processing
+- Enterprise
+- ETL
+- Java
+- Job Scheduling
+- Spring Framework
+
+## Timestamps
+
+- **Created:** 2024-01-15
+- **Modified:** 2026-05-19
 
 ## APIs
 
@@ -12,88 +25,62 @@ Spring Batch 5.1 is a lightweight, comprehensive batch framework designed to ena
 
 Core API for Spring Batch 5.1 providing batch processing capabilities including job and step configuration, chunk-oriented processing, job repository persistence, and fault tolerance.
 
+- **Human URL:** [https://docs.spring.io/spring-batch/docs/5.1.x/reference/html/](https://docs.spring.io/spring-batch/docs/5.1.x/reference/html/)
+- **Base URL:** `https://github.com/spring-projects/spring-batch`
+
+#### Tags
+
+- Batch Jobs
+- Chunk Processing
+- Job Repository
+- Step Execution
+
+#### Properties
+
 - [Documentation](https://docs.spring.io/spring-batch/docs/5.1.x/reference/html/)
-- [API Documentation](https://docs.spring.io/spring-batch/docs/5.1.x/api/)
+- [A P I  Documentation](https://docs.spring.io/spring-batch/docs/5.1.x/api/)
 - [GitHub Repository](https://github.com/spring-projects/spring-batch)
-- [Getting Started Guide](https://spring.io/guides/gs/batch-processing/)
-- [Maven Repository](https://mvnrepository.com/artifact/org.springframework.batch/spring-batch-core/5.1.0)
+- [Getting  Started  Guide](https://spring.io/guides/gs/batch-processing/)
+- [Maven  Repository](https://mvnrepository.com/artifact/org.springframework.batch/spring-batch-core/5.1.0)
+- [Stack Overflow](https://stackoverflow.com/questions/tagged/spring-batch)
+- [License](https://github.com/spring-projects/spring-batch/blob/main/LICENSE.txt)
 - [Issues](https://github.com/spring-projects/spring-batch/issues)
-- [Sample Projects](https://github.com/spring-projects/spring-batch/tree/main/spring-batch-samples)
+- [Sample  Projects](https://github.com/spring-projects/spring-batch/tree/main/spring-batch-samples)
 - [Release Notes](https://github.com/spring-projects/spring-batch/releases)
+- [OpenAPI](openapi/spring-batch-51-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
+- [Postman Collection](collections/spring-batch-51.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
+- [Open Collection](collections/spring-batch-51.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+- [Spectral  Rules](rules/spring-batch-51-rules.yml)
 
 ### Spring Batch 5.1 Actuator Monitoring
 
-Spring Boot Actuator-based monitoring for Spring Batch 5.1 applications providing health, execution status, and Micrometer metrics.
+Spring Boot Actuator-based monitoring endpoints for Spring Batch 5.1 applications providing job health, execution status, and Micrometer metrics visibility.
+
+- **Human URL:** [https://docs.spring.io/spring-boot/docs/3.2.x/actuator-api/htmlsingle/](https://docs.spring.io/spring-boot/docs/3.2.x/actuator-api/htmlsingle/)
+- **Base URL:** `http://localhost:8080/actuator`
+
+#### Tags
+
+- Actuator
+- Health
+- Metrics
+- Monitoring
+
+#### Properties
 
 - [Documentation](https://docs.spring.io/spring-batch/docs/5.1.x/reference/html/monitoring-and-metrics.html)
-
-## OpenAPI Specifications
-
-| API | File |
-|-----|------|
-| Spring Batch 5.1 Actuator API | [openapi/spring-batch-51-openapi.yml](openapi/spring-batch-51-openapi.yml) |
-
-## Spectral Rules
-
-| Ruleset | File |
-|---------|------|
-| Spring Batch 5.1 Rules | [rules/spring-batch-51-rules.yml](rules/spring-batch-51-rules.yml) |
-
-## Capabilities
-
-### Shared Definitions
-
-| API | File |
-|-----|------|
-| Spring Batch 5.1 Actuator API | [capabilities/shared/spring-batch-51-actuator.yaml](capabilities/shared/spring-batch-51-actuator.yaml) |
-
-### Workflow Capabilities
-
-| Workflow | Description | File |
-|----------|-------------|------|
-| Batch Job Monitoring | Monitor Spring Batch job executions, metrics, and health | [capabilities/batch-job-monitoring.yaml](capabilities/batch-job-monitoring.yaml) |
-
-## JSON Schemas
-
-| Schema | File |
-|--------|------|
-| Job Execution | [json-schema/spring-batch-51-job-execution-schema.json](json-schema/spring-batch-51-job-execution-schema.json) |
-| Job Parameters | [json-schema/spring-batch-51-job-parameters-schema.json](json-schema/spring-batch-51-job-parameters-schema.json) |
-
-## JSON Structures
-
-| Structure | File |
-|-----------|------|
-| Job Execution Domain Model | [json-structure/spring-batch-51-job-execution-structure.json](json-structure/spring-batch-51-job-execution-structure.json) |
-
-## JSON-LD Contexts
-
-| Context | File |
-|---------|------|
-| Spring Batch 5.1 | [json-ld/spring-batch-51-context.jsonld](json-ld/spring-batch-51-context.jsonld) |
-
-## Examples
-
-| Example | File |
-|---------|------|
-| Get Application Health | [examples/spring-batch-51-get-health-example.json](examples/spring-batch-51-get-health-example.json) |
-| List Job Executions | [examples/spring-batch-51-list-job-executions-example.json](examples/spring-batch-51-list-job-executions-example.json) |
-| Get Metric Value | [examples/spring-batch-51-get-metric-example.json](examples/spring-batch-51-get-metric-example.json) |
-
-## Vocabulary
-
-| Vocabulary | File |
-|------------|------|
-| Spring Batch 5.1 Domain Terms | [vocabulary/spring-batch-51-vocabulary.yml](vocabulary/spring-batch-51-vocabulary.yml) |
+- [Postman Collection](collections/spring-batch-51.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
+- [Open Collection](collections/spring-batch-51.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
 
 ## Common Properties
 
 - [Blog](https://spring.io/blog/category/batch)
 - [Support](https://spring.io/support)
 - [Forum](https://stackoverflow.com/questions/tagged/spring-batch)
-- [GitHub Issues](https://github.com/spring-projects/spring-batch/issues)
-- [Maven Central](https://search.maven.org/search?q=g:org.springframework.batch)
+- [Git Hub  Issues](https://github.com/spring-projects/spring-batch/issues)
+- [Maven  Central](https://search.maven.org/search?q=g:org.springframework.batch)
 
 ## Maintainers
 
-- Spring Team — spring-batch@vmware.com
+**FN:** Spring Team
+**Email:** spring-batch@vmware.com
