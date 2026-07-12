@@ -81,6 +81,10 @@ include:
   - name: Spring Batch Test
     url: https://docs.spring.io/spring-batch/docs/5.1.x/reference/html/testing.html
 common:
+  - type: VulnerabilityDisclosure
+    url: security/spring-batch-51-vulnerability-disclosure.yml
+  - type: DomainSecurity
+    url: security/spring-batch-51-domain-security.yml
   - type: Blog
     url: https://spring.io/blog/category/batch
   - type: Support
