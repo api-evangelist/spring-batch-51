@@ -81,6 +81,8 @@ include:
   - name: Spring Batch Test
     url: https://docs.spring.io/spring-batch/docs/5.1.x/reference/html/testing.html
 common:
+  - type: AgenticAccess
+    url: agentic-access/spring-batch-51-agentic-access.yml
   - type: VulnerabilityDisclosure
     url: security/spring-batch-51-vulnerability-disclosure.yml
   - type: DomainSecurity
