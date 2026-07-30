@@ -4,6 +4,18 @@ description: >-
   enable development of robust batch applications vital for daily operations of enterprise systems. Version 5.1 delivers
   Micrometer metrics, virtual thread support (Java 21), and enhanced chunk-oriented processing with retry, skip, and
   restart capabilities.
+accessModel:
+  pricing: freemium
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Freemium
+  confidence: medium
+  source:
+  - plans
+  generated: '2026-07-22'
+  method: derived
 image: https://spring.io/img/projects/spring-batch.svg
 url: https://spring.io/projects/spring-batch
 kind: opensource
@@ -19,57 +31,117 @@ tags:
   - Job Scheduling
   - Spring Framework
 apis:
-  - name: Spring Batch 5.1 Core API
-    description: >-
-      Core API for Spring Batch 5.1 providing batch processing capabilities including job and step configuration,
-      chunk-oriented processing, job repository persistence, and fault tolerance.
-    image: https://spring.io/img/projects/spring-batch.svg
-    humanURL: https://docs.spring.io/spring-batch/docs/5.1.x/reference/html/
-    baseURL: https://github.com/spring-projects/spring-batch
-    tags:
-      - Batch Jobs
-      - Chunk Processing
-      - Job Repository
-      - Step Execution
-    properties:
-      - type: Documentation
-        url: https://docs.spring.io/spring-batch/docs/5.1.x/reference/html/
-      - type: API Documentation
-        url: https://docs.spring.io/spring-batch/docs/5.1.x/api/
-      - type: GitHubRepository
-        url: https://github.com/spring-projects/spring-batch
-      - type: Getting Started Guide
-        url: https://spring.io/guides/gs/batch-processing/
-      - type: Maven Repository
-        url: https://mvnrepository.com/artifact/org.springframework.batch/spring-batch-core/5.1.0
-      - type: StackOverflow
-        url: https://stackoverflow.com/questions/tagged/spring-batch
-      - type: License
-        url: https://github.com/spring-projects/spring-batch/blob/main/LICENSE.txt
-      - type: Issues
-        url: https://github.com/spring-projects/spring-batch/issues
-      - type: Sample Projects
-        url: https://github.com/spring-projects/spring-batch/tree/main/spring-batch-samples
-      - type: ReleaseNotes
-        url: https://github.com/spring-projects/spring-batch/releases
-      - type: OpenAPI
-        url: openapi/spring-batch-51-openapi.yml
-      - type: SpectralRules
-        url: rules/spring-batch-51-rules.yml
-  - name: Spring Batch 5.1 Actuator Monitoring
-    description: >-
-      Spring Boot Actuator-based monitoring endpoints for Spring Batch 5.1 applications providing job health, execution
-      status, and Micrometer metrics visibility.
-    humanURL: https://docs.spring.io/spring-boot/docs/3.2.x/actuator-api/htmlsingle/
-    baseURL: http://localhost:8080/actuator
-    tags:
-      - Actuator
-      - Health
-      - Metrics
-      - Monitoring
-    properties:
-      - type: Documentation
-        url: https://docs.spring.io/spring-batch/docs/5.1.x/reference/html/monitoring-and-metrics.html
+- name: Spring Batch 5.1 Actuator Monitoring
+  description: >-
+    Spring Boot Actuator-based monitoring endpoints for Spring Batch 5.1 applications providing job health,
+    execution status, and Micrometer metrics visibility.
+  humanURL: https://docs.spring.io/spring-boot/docs/3.2.x/actuator-api/htmlsingle/
+  baseURL: http://localhost:8080/actuator
+  tags:
+  - Actuator
+  - Health
+  - Metrics
+  - Monitoring
+  properties:
+  - type: Documentation
+    url: >-
+      https://docs.spring.io/spring-batch/docs/5.1.x/reference/html/monitoring-and-metrics.html
+- aid: spring-batch-51:spring-batch-51-batch-jobs-api
+  name: Spring Batch 5.1 Batch Jobs API
+  description: Batch job execution management and monitoring
+  humanURL: https://docs.spring.io/spring-batch/docs/5.1.x/reference/html/
+  baseURL: https://github.com/spring-projects/spring-batch
+  tags:
+  - Batch Jobs
+  properties:
+  - type: OpenAPI
+    url: openapi/spring-batch-51-batch-jobs-api-openapi.yml
+  - type: Documentation
+    url: https://docs.spring.io/spring-batch/docs/5.1.x/reference/html/
+  - type: API Documentation
+    url: https://docs.spring.io/spring-batch/docs/5.1.x/api/
+  - type: GitHubRepository
+    url: https://github.com/spring-projects/spring-batch
+  - type: Getting Started Guide
+    url: https://spring.io/guides/gs/batch-processing/
+  - type: Maven Repository
+    url: https://mvnrepository.com/artifact/org.springframework.batch/spring-batch-core/5.1.0
+  - type: StackOverflow
+    url: https://stackoverflow.com/questions/tagged/spring-batch
+  - type: License
+    url: https://github.com/spring-projects/spring-batch/blob/main/LICENSE.txt
+  - type: Issues
+    url: https://github.com/spring-projects/spring-batch/issues
+  - type: Sample Projects
+    url: https://github.com/spring-projects/spring-batch/tree/main/spring-batch-samples
+  - type: ReleaseNotes
+    url: https://github.com/spring-projects/spring-batch/releases
+  - type: SpectralRules
+    url: rules/spring-batch-51-rules.yml
+- aid: spring-batch-51:spring-batch-51-health-api
+  name: Spring Batch 5.1 Health API
+  description: Application and component health checks
+  humanURL: https://docs.spring.io/spring-batch/docs/5.1.x/reference/html/
+  baseURL: https://github.com/spring-projects/spring-batch
+  tags:
+  - Health
+  properties:
+  - type: OpenAPI
+    url: openapi/spring-batch-51-health-api-openapi.yml
+  - type: Documentation
+    url: https://docs.spring.io/spring-batch/docs/5.1.x/reference/html/
+  - type: API Documentation
+    url: https://docs.spring.io/spring-batch/docs/5.1.x/api/
+  - type: GitHubRepository
+    url: https://github.com/spring-projects/spring-batch
+  - type: Getting Started Guide
+    url: https://spring.io/guides/gs/batch-processing/
+  - type: Maven Repository
+    url: https://mvnrepository.com/artifact/org.springframework.batch/spring-batch-core/5.1.0
+  - type: StackOverflow
+    url: https://stackoverflow.com/questions/tagged/spring-batch
+  - type: License
+    url: https://github.com/spring-projects/spring-batch/blob/main/LICENSE.txt
+  - type: Issues
+    url: https://github.com/spring-projects/spring-batch/issues
+  - type: Sample Projects
+    url: https://github.com/spring-projects/spring-batch/tree/main/spring-batch-samples
+  - type: ReleaseNotes
+    url: https://github.com/spring-projects/spring-batch/releases
+  - type: SpectralRules
+    url: rules/spring-batch-51-rules.yml
+- aid: spring-batch-51:spring-batch-51-metrics-api
+  name: Spring Batch 5.1 Metrics API
+  description: Micrometer-based application metrics
+  humanURL: https://docs.spring.io/spring-batch/docs/5.1.x/reference/html/
+  baseURL: https://github.com/spring-projects/spring-batch
+  tags:
+  - Metrics
+  properties:
+  - type: OpenAPI
+    url: openapi/spring-batch-51-metrics-api-openapi.yml
+  - type: Documentation
+    url: https://docs.spring.io/spring-batch/docs/5.1.x/reference/html/
+  - type: API Documentation
+    url: https://docs.spring.io/spring-batch/docs/5.1.x/api/
+  - type: GitHubRepository
+    url: https://github.com/spring-projects/spring-batch
+  - type: Getting Started Guide
+    url: https://spring.io/guides/gs/batch-processing/
+  - type: Maven Repository
+    url: https://mvnrepository.com/artifact/org.springframework.batch/spring-batch-core/5.1.0
+  - type: StackOverflow
+    url: https://stackoverflow.com/questions/tagged/spring-batch
+  - type: License
+    url: https://github.com/spring-projects/spring-batch/blob/main/LICENSE.txt
+  - type: Issues
+    url: https://github.com/spring-projects/spring-batch/issues
+  - type: Sample Projects
+    url: https://github.com/spring-projects/spring-batch/tree/main/spring-batch-samples
+  - type: ReleaseNotes
+    url: https://github.com/spring-projects/spring-batch/releases
+  - type: SpectralRules
+    url: rules/spring-batch-51-rules.yml
 maintainers:
   - FN: Spring Team
     email: spring-batch@vmware.com
